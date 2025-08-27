@@ -1,33 +1,71 @@
 var
-	W_VAR1 = 3
-	W_VAR2 = 7
-	W_VAR3 = -3
-	W_VAR4 = -6
-	W_VAR5 = 16
+	num1 = 3
+	num2 = 7
+	num3 = -3
+	num4 = -6
+	num5 = -16
+	aux = 0
 inicio
-	si (W_VAR1 < W_VAR2)
+	si (num1 > num2)
 	{
-		intercambio (W_VAR1, W_VAR2)
+		aux = num1
+		num1 = num2
+		num2 = aux
 	}
-	si (W_VAR1 < W_VAR3)
+	si (num1 > num3)
 	{
-		intercambio (W_VAR1, W_VAR3)
+		aux = num1
+		num1 = num3
+		num3 = aux
 	}
-	si (W_VAR1 < W_VAR4)
+	si (num1 > num4)
 	{
-		intercambio (W_VAR1, W_VAR4)
+		aux = num1
+		num1 = num4
+		num4 = aux
 	}
-	si (W_VAR1 < W_VAR5)
+	si (num1 > num5)
 	{
-		intercambio (W_VAR1, W_VAR5)
+		aux = num1
+		num1 = num5
+		num5 = aux
 	}
+	si (num2 > num3)
+	{
+		aux = num2
+		num2 = num3
+		num3 = aux
+	}
+	si (num2 > num4)
+	{
+		aux = num2
+		num2 = num4
+		num4 = aux
+	}
+	si (num2 > num5)
+	{
+		aux = num2
+		num2 = num5
+		num5 = aux
+	}
+	si (num3 > num4)
+	{
+		aux = num3
+		num3 = num4
+		num4 = aux
+	}
+	si (num3 > num5)
+	{
+		aux = num3
+		num3 = num5
+		num5 = aux
+	}
+	si (num4 > num5)
+	{
+		aux = num4
+		num4 = num5
+		num5 = aux
+	}
+	aux = ((num1 + num2) - (num3 +num4)) * num5
+	imprimir ("El resultado final es: \t", aux)
 fin
-
-subrutina intercambio (W_A, W_B : numerico)
-	var
-		W_AUX = 0
-	inicio
-		W_AUX = W_A
-		W_A = W_B
-		W_B = W_AUX
-	fin
